@@ -13,6 +13,11 @@ class ItemsController {
     this.itemRecords.$add({desc: item.desc})
     item.desc = undefined
   }
+
+  remove(item){
+    console.log(item)
+    this.itemRecords.$remove(item)
+  }
 }
 
 export default ItemsController;

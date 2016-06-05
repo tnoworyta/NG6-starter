@@ -21,6 +21,11 @@ class LoginController {
         //console.log(authData)
       }
     });
+    this.user = undefined 
+  }
+
+  logout() {
+    this.firebaseObj.unauth();
   }
 }
 

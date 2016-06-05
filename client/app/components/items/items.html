@@ -14,6 +14,6 @@
 
 <div ng-repeat="model in vm.itemRecords">
   {{model.desc}}
+  <a href="javascript:void(0)" ng-click="vm.remove(model)">[remove]</a>
 </div>
-<!-- <a href="javascript:void(0)" ng-click="vm.add()">Add me</a> -->
 </section>
