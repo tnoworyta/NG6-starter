@@ -17,6 +17,8 @@ class LoginController {
         console.log("Login Failed!", error);
       } else {
         console.log("Authenticated successfully with payload:", authData);
+        //authData = this.firebaseObj.getAuth();
+        //console.log(authData)
       }
     });
   }
