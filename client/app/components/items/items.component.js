@@ -9,7 +9,7 @@ let itemsComponent = {
   template,
   controller,
   controllerAs: 'vm',
-  providers: []
+  providers: ['$firebaseArray']
 };
 
 export default itemsComponent;
