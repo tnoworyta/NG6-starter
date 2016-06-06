@@ -4,11 +4,14 @@ import Common from './common/common';
 import Components from './components/components';
 import AppComponent from './app.component';
 import 'normalize.css';
+import ngFire from 'angularfire'
+import 'firebase';
 
 angular.module('app', [
     uiRouter,
+    'firebase',
     Common.name,
-    Components.name
+    Components.name,
   ])
   .config(($locationProvider) => {
     "ngInject";
