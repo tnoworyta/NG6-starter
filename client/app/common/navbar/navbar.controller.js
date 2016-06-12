@@ -2,7 +2,7 @@ class NavbarController {
   constructor(AuthFirebaseUserService) {
     "ngInject";
     this.name = 'navbar';
-    console.log(AuthFirebaseUserService.isAuthenticated())
+    this.authService = AuthFirebaseUserService
   }
 }
 

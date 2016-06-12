@@ -8,7 +8,7 @@ let loginComponent = {
   template,
   controller,
   controllerAs: 'vm',
-  providers: ['$firebaseAuth']
+  providers: ['AuthFirebaseUserService']
 };
 
 export default loginComponent;
