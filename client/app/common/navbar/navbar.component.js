@@ -1,7 +1,6 @@
 import template from './navbar.html';
 import controller from './navbar.controller';
 import './navbar.styl';
-//import MyService from '../my.service'
 
 let navbarComponent = {
   restrict: 'E',
@@ -9,7 +8,7 @@ let navbarComponent = {
   template,
   controller,
   controllerAs: 'vm',
-  providers: ['$firebaseAuth', 'MyService']
+  providers: ['AuthFirebaseUserService']
 };
 
 export default navbarComponent;
