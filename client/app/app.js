@@ -11,7 +11,7 @@ angular.module('app', [
     uiRouter,
     'firebase',
     Common.name,
-    Components.name,
+    Components.name
   ])
   .config(($locationProvider) => {
     "ngInject";
