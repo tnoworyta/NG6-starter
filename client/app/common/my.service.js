@@ -1,12 +1,14 @@
 import angular from 'angular';
 
 class MyService {
-  constructor() {
-
+  constructor($firebaseAuth) {
+    this.firebaseObj = new Firebase("https://mdoc1.firebaseio.com");
+    this.authData = this.firebaseObj.getAuth();
+    console.log(this.authData)
   }
 
   sayHello() {
-    console.log('hello');
+    return this.authData;
   }
 }
 //app.service('MyService', MyService);
@@ -14,8 +16,6 @@ class MyService {
 
 //let fbaseModule = angular.module('fbase', []).service('MyService', MyService);
 
-let fbaseModule = angular.module('fbase', [
-
-]).service('MyService', MyService)
+let fbaseModule = angular.module('fbase', []).service('MyService', ['$firebaseAuth', MyService])
 
 export default fbaseModule;
