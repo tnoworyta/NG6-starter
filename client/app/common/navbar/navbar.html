@@ -1,13 +1,14 @@
-<div>
-  Auth: {{vm.authService.isAuthenticated()}}
+<div ng-bind="vm.authData.isLogged">
+  Auth: {{vm.authData.isLogged}}
 </div>
 <nav class="navbar">
   <div class="logo">
     <h1><a ui-sref="home">{{ vm.name }}</a></h1>
   </div>
   <div class="nav-links">
-    <span ng-if="!vm.authService.isAuthenticated()"><a ui-sref="login">Sign in</a></span>
-    <span><a ui-sref="items">Items</a></span>
-    <span><a ui-sref="about">about</a></span>
+    <span><a ui-sref="login" ng-if="!vm.authData.isLogged">Sign in</a></span>
+    <span><a ui-sref="items" ng-if="vm.authData.isLogged">Items</a></span>
+    <span><a ui-sref="about" ng-if="vm.authData.isLogged">about</a></span>
+    <span ng-if="vm.authData.isLogged"><logout></logout></span>
   </div>
 </nav>

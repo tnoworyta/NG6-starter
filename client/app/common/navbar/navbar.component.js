@@ -8,7 +8,7 @@ let navbarComponent = {
   template,
   controller,
   controllerAs: 'vm',
-  providers: ['AuthFirebaseUserService']
+  providers: ['AuthFirebaseUserService', 'pubSub']
 };
 
 export default navbarComponent;
