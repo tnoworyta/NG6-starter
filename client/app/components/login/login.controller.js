@@ -4,7 +4,7 @@ class LoginController {
     this.name = 'login';
     this.ref = AuthFirebaseUserService;
     this.pubSub = pubSub;
-    this.user = { email: 'freezing.moon77@gmail.com', password: 'QWERTY99' };
+    this.user = { email: 'freezing.moon77@gmail.com', password: '' };
   }
 
   login() {

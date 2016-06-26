@@ -5,6 +5,7 @@ import Login from './login/login';
 import Logout from './logout/logout';
 import Items from './items/items';
 import Item from './item/item';
+import AddItem from './add_item/add.item';
 
 let componentModule = angular.module('app.components', [
   Home.name,
@@ -12,6 +13,7 @@ let componentModule = angular.module('app.components', [
   Login.name,
   Items.name,
   Item.name,
+  AddItem.name,
   Logout.name
 ]);
 
