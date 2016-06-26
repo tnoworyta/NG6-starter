@@ -6,7 +6,7 @@ class AddItemController {
 
   add(keyEvent, item) {
     if(keyEvent.which === 13){
-    if(item != undefined){
+    if(item && item.desc && item.desc.length > 0){
       this.items.$add({desc: item.desc, created_at: new Date().getTime()});
       item.desc = undefined
     }
