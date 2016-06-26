@@ -3,8 +3,7 @@ import uiRouter from 'angular-ui-router';
 import loginComponent from './login.component';
 
 let loginModule = angular.module('login', [
-  uiRouter,
-  'firebase'
+  uiRouter
 ])
 
 .config(($stateProvider) => {

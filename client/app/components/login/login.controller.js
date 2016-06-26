@@ -1,31 +1,16 @@
 class LoginController {
-  constructor($firebaseAuth) {
+  constructor(AuthFirebaseUserService, pubSub) {
     "ngInject";
     this.name = 'login';
-    this.firebaseObj = new Firebase("https://mdoc1.firebaseio.com");
+    this.ref = AuthFirebaseUserService;
+    this.pubSub = pubSub;
+    this.user = { email: 'freezing.moon77@gmail.com', password: '' };
   }
 
   login() {
-    console.log('Login called chief!')
-    console.log(this.user)
-
-    this.firebaseObj.authWithPassword({
-      "email": this.user.email,
-      "password": this.user.password
-    }, (error, authData) => {
-      if (error) {
-        console.log("Login Failed!", error);
-      } else {
-        console.log("Authenticated successfully with payload:", authData);
-        //authData = this.firebaseObj.getAuth();
-        //console.log(authData)
-      }
-    });
-    this.user = undefined 
-  }
-
-  logout() {
-    this.firebaseObj.unauth();
+    this.ref.login(this.user.email, this.user.password, this.pubSub);
+    this.pubSub.publish('auth-data', 'isLogged', true);
+    this.user = undefined;
   }
 }
 

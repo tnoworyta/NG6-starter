@@ -1,7 +1,6 @@
 import template from './login.html';
 import controller from './login.controller';
 import './login.styl';
-import 'firebase';
 
 let loginComponent = {
   restrict: 'E',
@@ -9,7 +8,7 @@ let loginComponent = {
   template,
   controller,
   controllerAs: 'vm',
-  providers: ['$firebaseAuth']
+  providers: ['AuthFirebaseUserService', 'pubSub']
 };
 
 export default loginComponent;
