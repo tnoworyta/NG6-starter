@@ -7,7 +7,7 @@ class ItemsController {
   }
 
   add(item) {
-    this.items.$add({desc: item.desc});
+    this.items.$add({desc: item.desc, created_at: new Date().getTime()});
     item.desc = undefined
   }
 }
