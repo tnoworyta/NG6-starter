@@ -13,16 +13,19 @@ class AuthFirebaseUserService {
     }, (error, authData) => {
       if (!error) {
         pubSub.publish('auth-data', 'isLogged', true);
+        this.authData = this.firebaseObj.getAuth();
       }
     });
   }
 
   logout(pubSub) {
     this.firebaseObj.unauth();
+    this.authData = null;
     pubSub.publish('auth-data', 'isLogged', false);
   }
 
   isAuthenticated() {
+    console.log('auth data from the service: ', this.authData);
     return !!this.authData;
   }
 }

@@ -1,5 +1,5 @@
 class LoginController {
-  constructor(AuthFirebaseUserService, pubSub) {
+  constructor(AuthFirebaseUserService, pubSub, $rootScope) {
     "ngInject";
     this.name = 'login';
     this.ref = AuthFirebaseUserService;
