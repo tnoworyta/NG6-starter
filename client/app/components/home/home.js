@@ -1,6 +1,8 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 import homeComponent from './home.component';
+import ngFire from 'angularfire';
+import firebase from 'firebase';
 
 let homeModule = angular.module('home', [
   uiRouter

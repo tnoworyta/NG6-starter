@@ -1,0 +1,13 @@
+<navbar></navbar>
+<h1>{{ vm.name }}</h1>
+<section>
+
+
+<br>
+ <add-item items="vm.items"></add-item>
+<br>
+
+<ul ng-repeat="model in vm.items">
+  <item item="model" items="vm.items"></item>
+</ul>
+</section>
