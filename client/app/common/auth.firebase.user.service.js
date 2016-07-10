@@ -25,7 +25,6 @@ class AuthFirebaseUserService {
   }
 
   isAuthenticated() {
-    console.log('auth data from the service: ', this.authData);
     return !!this.authData;
   }
 }
